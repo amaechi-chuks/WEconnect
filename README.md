@@ -1,1 +1,1 @@
-# WEconnect
+this is Andela Developer challenge which has been given to all participant to acquint us with the bootcamp proceedures and tips. this challenge is about building an App called WEconnect. the challenge has been split into different stages, each stage has its own expected ouput. we are strictly to adhere to instructions given on above named project.
