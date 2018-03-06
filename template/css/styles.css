@@ -1,67 +1,66 @@
-.top-nav-collapse {
-    background-color: #78909c !important;
-}
-.navbar:not(.top-nav-collapse) {
-    background: transparent !important;
-}
-@media (max-width: 768px) {
-    .navbar:not(.top-nav-collapse) {
-        background: #78909c !important;
-    }
-}
-h1 {
-    letter-spacing: 8px;
-}
-h5 {
-    letter-spacing: 3px;
-}
-.hr-light {
-    border-top: 3px solid #fff;
-    width: 80px;
-}
-@media (max-width: 576px) {
-    .full-height,
-    .full-height body,
-    .full-height header,
-    .full-height header .view {
-        height: 100%;
-    }
-}
-@media (max-width: 768px) {
-    .full-height,
-    .full-height body,
-    .full-height header,
-    .full-height header .view {
-        height: 100%;
-    }
-}
-@media (max-width: 992px) {
-    .full-height,
-    .full-height body,
-    .full-height header,
-    .full-height header .view {
-        height: 100%;
-    }
-}
-@media (max-width: 1600px) {
-    .full-height,
-    .full-height body,
-    .full-height header,
-    .full-height header .view {
-        height: 90%;
-    }
-}
 
-.image-fluid {
-    height: 50%;
-    width: 50%;
-    
-}
 
-#carouselIndicators {
-    background-color:lightgrey;
-}
 
-#mainNav {
-    background-color:black;
-}
+.jumbotron,.jumbotron-fluid {  
+    background-image: url('../images/image00.jpg');
+    color: aliceblue;
+    background-size: 100%;
+    background-position: center;
+  }
+  
+  main{
+      /*max-width: 1000px;*/
+  }
+  
+  
+  footer{
+      background-color: #000105;
+      color: lightsteelblue;
+  }
+  
+  .carousel-item img.img-fluid {
+      width: 100%;
+      object-fit: contain;
+    }
+  
+  
+  
+    #carouselExampleIndicators{
+        background-color: lightgrey;
+    }
+  
+    @media (min-width: 576px){
+      #jumbotronMainText {
+          font-size: 5.5rem;
+          font-weight: 300;
+          line-height: 1.2;
+      }
+      
+      #jumbotronSubElements {
+          font-size: 2rem;
+          font-weight: 400;
+          line-height: 1.2;
+          color: blanchedalmond
+      }
+      .carousel-caption h2 {
+          font-size: 4rem;
+          font-weight: 300;
+          line-height: 1.2;
+          color: rgba(255, 255, 255, 0.884);
+          border-color: #b8daff;
+      }
+  
+      .carousel-caption  {
+          font-size: 1.5rem;
+          font-weight: 200;
+          line-height: 1.2;
+          color: rgba(255, 255, 255, 0.884);
+          padding: 0.75rem 1.25rem;
+          margin-bottom: 1rem;
+          border: 1px solid transparent;
+          border-radius: 0.25rem;
+          background-color: #00000086;
+          border-color: #b8daff;
+      }
+    }
+  
