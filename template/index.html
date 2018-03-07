@@ -14,36 +14,57 @@
 </head>
 
 <body>
-    <header class="sticky-top">
-        <nav class="navbar navbar-toggleable-sm navbar-inverse bg-inverse">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+            <a id="navBarAppTitle" class="navbar-brand weconnect" href="#">
+                <span class="we">We</span>Connect</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a id="navBarAppTitle" class="navbar-brand" href="#">This will be changed to the APP_TITLE by main.js</a>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
-                    <a class="nav-item nav-link" href="#">Sign In</a>
-                    <a class="nav-item nav-link" href="#">Sign Up</a>
-                </div>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <span class="weconnect">
+                                <span class="we">We</span>Connect</span> Business Listings
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-header">Top Performers</a>
+                            <a businessID="" class="dropdown-item text-capitalize" href="#">business 1</a>
+                            <a businessID="" class="dropdown-item text-capitalize" href="#">business 1</a>
+                            <a businessID="" class="dropdown-item text-capitalize" href="#">business 1</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Yellow Pages</a>
+    
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2 fluid" type="search" placeholder="What do you need?" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
             </div>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search businesses" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
         </nav>
-    </header>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 id="jumbotronMainText" class="h1 text-center">Connecting business</h1>
-            <h2 id="jumbotronSubElements" class="text-center lead">
-
-            </h2>
+    
+        <div class="jumbotron jumbotron-fluid">
+            <div class="justify-content-center row">
+                <span id="jumbotronMainText" class="h1 text-center col-12 no-gutters mx-auto"></span>
+                <span class="text-center">
+                    <span id="jumbotronSubText" class="jumbotronSubText align-middle"></span>
+                    <a class="btn text-capitalize jumbotronSubText font-underline" href="#">
+                        <u>join us</u>
+                    </a>
+                </span>
+            </div>
         </div>
-    </div>
 
 
     <main class="container-fluid">
