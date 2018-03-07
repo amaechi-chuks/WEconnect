@@ -1,16 +1,12 @@
 
-
-
 .jumbotron,.jumbotron-fluid {  
     background-image: url('../images/image00.jpg');
-    color: aliceblue;
+    color: var(--we_color0);
     background-size: 100%;
     background-position: center;
   }
   
-  main{
-      /*max-width: 1000px;*/
-  }
+  
   
   
   footer{
@@ -63,4 +59,13 @@
           border-color: #b8daff;
       }
     }
+
   
+  @supports ((position: -webkit-sticky) or (position: sticky)) {
+    #mainCarousel.sticky-top {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 50px;
+      z-index: 10;
+    }
+  }
