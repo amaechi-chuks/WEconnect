@@ -1,3 +1,17 @@
+:root{  
+    --we_color1: rgb(51, 180, 255);
+    --we_color2: rgb(255, 174, 0);
+    --we_color3: rgb(52, 58, 64); 
+    --we_color11:rgb(104, 200, 255);
+    --we_color22: rgb(201, 188, 7);
+    --we_color33: rgb(79, 84, 90);
+    --we_color0: rgb(240, 248, 255);
+}
+
+.colorWhite{
+    color: var(--we_color0);
+}
+
 
 .jumbotron,.jumbotron-fluid {  
     background-image: url('../images/image00.jpg');
@@ -6,22 +20,46 @@
     background-position: center;
   }
   
-  
-  
+  body{
+    background-color: whitesmoke;
+
+}
+
+main{
+    /*max-width: 1000px;*/
+}
   
   footer{
       background-color: #000105;
-      color: lightsteelblue;
+      color: var(--we_color0);
   }
   
   .carousel-item img.img-fluid {
       width: 100%;
-      object-fit: contain;
+    
     }
   
+    .carousel-item {
+        height: auto;
+      }
+    
+      .weconnect{
+        color: var(--we_color1) !important;
+    }
+
+    .we{
+        color: var(--we_color2) !important;
+    }
+
+    .weconnect:hover{
+        color: var(--we_color11) !important;
+    }
+
+    .we:hover{
+        color: var(--we_color22) !important;
+    }
   
-  
-    #carouselExampleIndicators{
+    #maincarousel{
         background-color: lightgrey;
     }
   
@@ -31,13 +69,30 @@
           font-weight: 300;
           line-height: 1.2;
       }
-      
-      #jumbotronSubElements {
-          font-size: 2rem;
-          font-weight: 400;
-          line-height: 1.2;
-          color: blanchedalmond
+
+      #jumbotronSubText {
+        /*color: var(--we_color2);*/
+    }
+      a.jumbotronSubText{
+        border: 3px dotted;
+        border-color: var(--we_color1); 
+        background: var(--we_color3);
+        color: var(--we_color2);
+    }
+    
+    a.jumbotronSubText:hover {
+        border: 3px dotted;
+        border-color: var(--we_color11); 
+        background: var(--we_color33);
+        color: var(--we_color22);
+    }
+    
+      .jumbotronSubText {
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.2;
       }
+      
       .carousel-caption h2 {
           font-size: 4rem;
           font-weight: 300;
