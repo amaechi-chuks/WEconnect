@@ -25,10 +25,6 @@
 
 }
 
-main{
-    /*max-width: 1000px;*/
-}
-  
   footer{
       background-color: #000105;
       color: var(--we_color0);
@@ -70,9 +66,7 @@ main{
           line-height: 1.2;
       }
 
-      #jumbotronSubText {
-        /*color: var(--we_color2);*/
-    }
+      
       a.jumbotronSubText{
         border: 3px dotted;
         border-color: var(--we_color1); 
@@ -123,4 +117,37 @@ main{
       top: 50px;
       z-index: 10;
     }
+  }
+  h3 {
+     color:darkslategrey;
+     text-align: center;
+     text-decoration-line: var(--we_color0);
+     
+  }
+  
+    
+  @media(min-width: 768px) {
+    .field-label-responsive {
+      padding-top: .5rem;
+      text-align: right;
+      background-position: var(--we_color11);
+    }
+  }
+  .container {
+      background-color: var(--we_color33);
+  }
+  .businessprofile {
+      background-color: var(--we_color0);
+      text-justify: "center";
+
+  }
+  .businessprofile-text {
+      text-align: center;
+  }
+  /*sign-up button */
+  .sign-up {
+      float:center;
+  }
+  .businessprofile-image {
+      float: center;
   }
