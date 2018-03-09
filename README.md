@@ -10,3 +10,4 @@ project design:
 -server:this directory will contain the back-end implementation in NodeJS-Express
 -client: this directory will contain your front-end implementation in ReactJS and Redux
 .build out the app's UI into the template directory 
+-Host the UI template on Github pages
