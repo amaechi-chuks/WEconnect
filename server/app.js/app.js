@@ -21,3 +21,5 @@ app.use(bodyParser.urlencoded({
 app.get('/', (req, res) => res.status(200).send({
     message: 'Welcome to the Weconnect API!',
 }));
+
+modules.export = app;
