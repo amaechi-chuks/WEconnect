@@ -22,4 +22,16 @@ app.get('/', (req, res) => res.status(200).send({
     message: 'Welcome to the Weconnect API!',
 }));
 
+
+
+// Setup a default catch-all route that sends back a welcome message in JSON format.
+app.get('/businesses/:businessid', (req, res) => {
+    let businessid = parseInt(req.params.businessid, 10);
+    console.log(businessid);
+    let result = businesses.filter(mybiz => mybiz.businessid === businessid)[0];
+
+    if ((!result) ?  res .sendStatus(404) : res.send(result));
+    
+});
+
 module.exports = app;
