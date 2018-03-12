@@ -2,7 +2,7 @@ const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const businesses = require('./businesses.js');
-//const reviews = require('./reviews.js');
+const reviews = require('./reviews.js');
 // Set up the express app
 const app = express();
 
@@ -30,8 +30,43 @@ app.get('/businesses/:businessid', (req, res) => {
     //console.log(businessid);
     let result = businesses.filter(mybiz => mybiz.businessid === businessid)[0];
 
-    if ((!result) ?  res .sendStatus(404) : res.send(result));
-    
+    if ((!result) ? res.sendStatus(404) : res.send(result));
+
 });
 
+
+// Setup a default catch-all route that sends back a welcome message in JSON format.
+app.get('/businesses/:businessid/reviews', (req, res) => {
+    let bizid = parseInt(req.params.businessid, 10);
+    let known = reviews.filter((now) => {
+        return now.businessid === bizid;
+    });
+    known.forEach((memm) => {
+        res.send(memm.comments);
+    });
+
+    // GET all businesses
+app.get('/businesses', (req, res) => res.status(200).send(businesses));
+
+// GET all reviews
+app.get('/reviews', (req, res) => res.status(200).send(reviews));
+
+// POST a Business for Weconnect
+app.post('/businesses', (req, res) => {
+    const newBiz = req.body;
+    console.log(newBiz.businessid);
+    let found = businesses.find((check) => {
+        return check.businessid === newBiz.businessid;
+    })
+    if(found){
+        return res.sendStatus(400); 
+    }
+    else{
+    businesses.push(newBiz);
+    }
+    // return posted businesses
+    const result = businesses.filter(newBusiness => newBusiness.businessid === newBiz.id)[0];
+    res.send(newBiz);
+});
+   
 module.exports = app;
