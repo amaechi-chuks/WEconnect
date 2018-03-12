@@ -1,4 +1,4 @@
-const APP_TITLE = 'WeConnect';
+//const APP_TITLE = 'WeConnect';
 const JUMBOTRON_MAIN_TEXT = 'Connecting Business';
 const JUMBOTRON_SUB_ELEMENTS = 'What are you waiting for?';
 const COPYRIGHT = 'Chucks Amaechi';
