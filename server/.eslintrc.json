@@ -1,8 +1,10 @@
 {
+
     "ecmaFeatures": {
         "modules": true,
         "module":  true,
         "jsx": true
+        
     },
 
     "globals": {
@@ -25,13 +27,18 @@
             "error",
             4
         ],
+
+        
+            "no-unused-vars": [
+                "error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false}],
+        
         "linebreak-style": [
             "error",
             "windows"
         ],
         "no-console": [
-            "error",
-            "offgi"
+            
+            "off"
         ],
         "quotes": [
             "error",
