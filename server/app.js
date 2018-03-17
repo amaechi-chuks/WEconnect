@@ -1,8 +1,9 @@
 const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
-const bcrypt = require ('bcryptjs');
+const bcrypt = require('bcryptjs');
 const passport = require('passport-local');
+
 // Set up the express app
 const app = express();
 
@@ -15,36 +16,27 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-
-
 // Setting up API routes
 app.get('/', (req, res) => res.status(200).send({
     message: 'Welcome to the Weconnect API!',
 }));
 
+// GET all businesses by location ( not fully implented)
+app.get('/bus', (req, res) => {
+    if (req.query) {
+        res.send(req.query);
+    }
 
-
-// Setup a default catch-all route that sends back a welcome message in JSON format.
-app.get('/businesses/:businessid', (req, res) => {
-    let businessid = parseInt(req.params.businessid, 10);
-    //console.log(businessid);
-    let result = businesses.filter(mybiz => mybiz.businessid === businessid)[0];
-
-    if ((!result) ? res.sendStatus(404) : res.send(result));
 
 });
 
 
-// Setup a default catch-all route that sends back a welcome message in JSON format.
-app.get('/businesses/:businessid/reviews', (req, res) => {
-    let bizid = parseInt(req.params.businessid, 10);
-    let known = reviews.filter((now) => {
-        return now.businessid === bizid;
-    });
-    known.forEach((memm) => {
-        res.send(memm.comments);
-    });
-});
+
+let businesses = require('./route/businesses.js' );
+let auth = require('./route/user.js' );
+
+app.use('/auth', auth);
+app.use('/businesses', businesses);
 
 // GET all businesses
 app.get('/businesses', (req, res) => res.status(200).send(businesses));
