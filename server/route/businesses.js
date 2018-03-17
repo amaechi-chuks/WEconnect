@@ -7,7 +7,7 @@ app.use('/:businessid/reviews', reviews);
 
 app.get('/:businessid', (req, res) => {
     let businessid = parseInt(req.params.businessid, 10);
-    console.log(businessid)
+    console.log(businessid);
     let result = businesses.filter(mybiz => mybiz.businessid == businessid)[0];
 
     if (!result) {

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # WEConnect
 
  WeConnect provides a platform that brings businesses and individuals together. 
@@ -26,6 +27,8 @@ This platform creates awareness for businesses and gives the users the ability t
 
 ## BACKEND-END (SERVER)
 =======
+=======
+>>>>>>> route
 # WEConnect #
 
 WeConnect provides a platform that brings businesses and individuals together. This platform creates awareness for businesses and gives the users the ability to write reviews about the businesses they have interacted with.
@@ -53,12 +56,16 @@ FRONT-END (UI TEMPLATE)
   -  **You are to create a _pull request to elicit review and feedback for the UI_ when you are done working on them.**
 
 ## BACKEND-END (SERVER) ##
+<<<<<<< HEAD
 >>>>>>> model
+=======
+>>>>>>> route
 
 **Config for server setup**
 
 HOW TO INSTALL SIMPLY RUN IN PROJECT/SERVER DIRECTORY:
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 npm install {INSTALLING ALL PROJECT DEPENDENCIES} npm start OR node server.js {RESTART THE SERVER WHEN UPDATING CHANGES}
 
@@ -66,9 +73,15 @@ visit host http://localhost:8020 and test the following routes:
 
 test get: http://localhost:8020/businesses/businessId and other defined routes
 =======
+=======
+>>>>>>> route
 npm install {INSTALLING ALL PROJECT DEPENDENCIES} npm start OR npm run start:dev {RESTART THE SERVER WHEN UPDATING CHANGES}
 
 visit host http://localhost:8020 and test the following routes:
 
+<<<<<<< HEAD
 test get: http://localhost:8020/businesses/businessId and other defined routes**
 >>>>>>> model
+=======
+test get: http://localhost:8020/businesses/businessId and other defined routes
+>>>>>>> route
