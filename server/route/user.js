@@ -13,11 +13,17 @@ app.post('/signup', (req, res) => {
     if (found) {
         return res.sendStatus(400);
     }
+
     else {
+        bcrypt.genSalt(10, (err, salt) => {
+            bcrypt.hash(newUser.password, salt, (err, hash) => {
+                newUser.password = hash;
+            });
+        });
         users.push(newUser);
         return res.sendStatus(200);
     }
-    
+
 });
 app.post('/signin', (req, res) => {
 
