@@ -32,36 +32,34 @@ app.get('/bus', (req, res) => {
 
 
 
-let businesses = require('./route/businesses.js' );
-let auth = require('./route/user.js' );
+let businesses = require('./route/businesses.js');
+let auth = require('./route/user.js');
 
 app.use('/auth', auth);
 app.use('/businesses', businesses);
 
-// GET all businesses
-app.get('/businesses', (req, res) => res.status(200).send(businesses));
 
 // GET all reviews
-app.get('/reviews', (req, res) => res.status(200).send(reviews));
+// app.get('/reviews', (req, res) => res.status(200).send(reviews));
 
-// POST a Business for Weconnect
-app.post('/businesses', (req, res) => {
-    const newBiz = req.body;
-    //console.log(newBiz.businessid);
-    let found = businesses.find((check) => {
-        return check.businessid === newBiz.businessid;
-    });
-    if (found) {
-        return res.sendStatus(400);
+// PUT Method
+app.put('/api/businesses/:id', (req, res) => {
+    const id = parseInt(req.params.id, 10);
+    const oldbusinesses = businesses.filter(r => r.id === id)[0];
+
+    if (!oldbusinesses) {
+        const item = req.body;
+        item.id = id;
+        businesses.push(item);
+        // res.setHeader('Location', `/api/businesses/) + {id}`);
+        res.sendStatus(201);
     } else {
-        businesses.push(newBiz);
+        oldbusinesses.name = req.body.name;
+        oldbusinesses.id = req.body.id;
+        oldbusinesses.reviews = req.body.reviews;
+        res.sendStatus(204);
     }
-
-    // return posted businesses
-    const result = businesses.filter(newBusiness => newBusiness.businessid === newBiz.id)[0];
-    res.send(newBiz);
 });
-
 // Post a review
 app.post('/businesses/:businessid/reviews', (req, res) => {
     let bizid = parseInt(req.params.businessid, 10);
