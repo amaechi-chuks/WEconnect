@@ -1,23 +1,30 @@
 const businesses = [{
     businessid: 1,
-    name: 'AfeLuxury Autos',
+    name: 'Amaechi Automobile',
     category: 'Auto',
     location: 'lagos',
     keywords: ['cars', 'auto', 'tokunbo', 'used cars']
 },
 {
     businessid: 2,
-    name: 'Chuks Clothing',
-    category: 'Fashion',
+    name: 'Love Solution',
+    category: 'recuritement',
     location: 'lagos',
-    keywords: ['wears', 'men', 'unisex', 'women']
+    keywords: ['jobs', 'interviews', 'online test', 'training']
 },
 {
     businessid: 3,
-    name: 'Chuks Place',
-    category: 'Hospitality',
+    name: 'Chuks cosmetics',
+    category: 'fashion',
     location: 'lagos',
-    keywords: ['foods', 'eatery', 'bakery', 'outdoor']
+    keywords: ['make-up', 'styling', 'facial therapy', 'cream']
+},
+{
+    businessid: 4,
+    name: 'Flystar',
+    category: 'travel agent',
+    location: 'Auja',
+    keywords: ['ticketing', 'flight scheduling', 'hotel booking', 'vacation arrangement']
 },
 ];
 module.exports = businesses;
