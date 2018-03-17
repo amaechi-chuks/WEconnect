@@ -78,20 +78,7 @@ app.post('/businesses/:businessid/reviews', (req, res) => {
         return now.businessid === bizid;
     });
     res.send(found);
-    // if(found){
-    //     reviews.push(newBiz);
-    // }
-    // else{
-    //  return res.sendStatus(400); 
-    // }
-    // if (!item.id) {
-    //     return res.sendStatus(500);
-    // }
-
-    // businesses.review.push(item.review);
-    // // return posted businesses
-    // const result = businesses.filter(newbusinesses => newbusinesses.id === item.id)[0];
-    // res.send(result);
+   
 });
 // PUT Method
 app.put('/api/businesses/:id', (req, res) => {
@@ -120,8 +107,6 @@ app.delete('/businesses/:id', (req, res) => {
         return res.sendStatus(404);
     }
 
-    // const newbusinesses = businesses.filter(r => r.id !== id);
-    // res.sendStatus(204);
 });
 
 module.exports = app;
