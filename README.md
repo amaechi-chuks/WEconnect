@@ -1,28 +1,30 @@
 # WEConnect #
 
 WeConnect provides a platform that brings businesses and individuals together. This platform creates awareness for businesses and gives the users the ability to write reviews about the businesses they have interacted with.
-FRONT-END (UI TEMPLATE)
 
-## FRONT-END (UI template) ##
-**project design**
 
-  -  using pivotal tracker to create a roadmap for the client-side and server-side
+## Getting Started ##
+- create a repository on my local machine and named it WeConnect. Inside the repository, I make three directories namely: 
+ **server**
+ **template**
+ **client**
+- On template directory, thats a folder I will be building up my UI template. lets start with the template directory.
 
-  -  create a Github repository, add a README, and clone it yo your computer.
+- Inside template folder, I initialize git by typing git init on my command line. git will start tracking the changes on the template folder. I also need to initialize npm to have my dependences by typing npm init on my command line.
+ 
+ - I created a github repository on my github account and named it WeConnect. This is going to be my remote repository for my project. On the command line, I added the remote origin to my local machine by typing git remote add  origin https://github.com/amaechi-chuks/WEconnect.git.
 
-  -  create three directories in your local git repo.
+ - I created a branch called develope and from develope branch, I branch out to my feature branches namely: _**sign-up**_
+ _**sign-in**_
+ _**register business**_
+_**business catalog**_
+_**business profile**_
+and after working on each branch, I merge into develop branch.
 
-  -  template: this directory will contain UI template for the front-end in HTML/CSS
 
-  -  server:this directory will contain the back-end implementation in NodeJS-Express
 
-  -  client: this directory will contain your front-end implementation in ReactJS and Redux
 
-  -  build out the app's UI into the template directory
-
-  -  Host the UI template on Github pages
-
-  -  **You are to create a _pull request to elicit review and feedback for the UI_ when you are done working on them.**
+ 
 
 ## BACKEND-END (SERVER) ##
 
