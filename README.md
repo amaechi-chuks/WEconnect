@@ -14,11 +14,12 @@ WeConnect provides a platform that brings businesses and individuals together. T
  
  - I created a github repository on my github account and named it WeConnect. This is going to be my remote repository for my project. On the command line, I added the remote origin to my local machine by typing git remote add  origin https://github.com/amaechi-chuks/WEconnect.git.
 
- - I created a branch called develope and from develope branch, I branch out to my feature branches namely: _**sign-up**_
- _**sign-in**_
- _**register business**_
-_**business catalog**_
-_**business profile**_
+ - I created a branch called develope and from develope branch, I branch out to my feature branches namely: 
+ - **sign-up**
+ - **sign-in**
+ - **register business**
+- **business catalog**
+- **business profile**
 and after working on each branch, I merge into develop branch.
 
 
