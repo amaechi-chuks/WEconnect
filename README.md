@@ -5,9 +5,9 @@ WeConnect provides a platform that brings businesses and individuals together. T
 
 ## Getting Started ##
 - create a repository on my local machine and named it WeConnect. Inside the repository, I make three directories namely: 
- **server**
- **template**
- **client**
+- **server**
+ - **template**
+ - **client**
 - On template directory, thats a folder I will be building up my UI template. lets start with the template directory.
 
 - Inside template folder, I initialize git by typing git init on my command line. git will start tracking the changes on the template folder. I also need to initialize npm to have my dependences by typing npm init on my command line.
